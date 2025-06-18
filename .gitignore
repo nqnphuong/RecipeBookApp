@@ -1,0 +1,44 @@
+# Xcode
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdatad
+*.xcsettings
+*.xcodeproj/project.xcworkspace/
+.idea/
+*.swiftsourceinfo
+
+# SwiftPM
+.build/
+.swiftpm/xcode/package.xcworkspace/
+
+# Swift Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Archives
+*.xcarchive
+
+# Personal data
+*.env
+*.DS_Store
+
+# Other
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Firebase/Secrets (optional)
+GoogleService-Info.plist
