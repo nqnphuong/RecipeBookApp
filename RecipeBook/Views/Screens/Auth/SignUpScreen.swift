@@ -25,10 +25,10 @@ struct SignUpScreen: View {
                 VStack(spacing: 20) {
                     InputSection(name: $name, email: $email, password: $password, confirmPassword: $confirmPassword)
                     CustomCheckbox(isChecked: $isChecked, label: "Accept terms & Condition").padding(.leading, 10)
-                    SignUpButton(action: { /* logic */ }).padding(.top, 5)
+                    SignUpButton(action: goToSignIn).padding(.top, 5)
                     SocialLoginDivider()
                     SocialLoginButtons()
-                    SignUpLink()
+                    SignUpLink(action: goToSignIn)
                 }
             }
             .padding(.horizontal, 30)
@@ -119,6 +119,8 @@ private struct SocialLoginButtons: View {
 }
 
 private struct SignUpLink: View {
+    let action : () -> Void
+    
     var body: some View {
         HStack(spacing: 4) {
             Text("Already a member?")
@@ -126,7 +128,7 @@ private struct SignUpLink: View {
                 .textStyle(.smallerRegular)
             
             Button {
-                // Navigate to SignIn
+                action()
             } label: {
                 Text("Sign in")
                     .foregroundStyle(.secondary100)

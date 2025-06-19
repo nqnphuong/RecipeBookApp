@@ -43,7 +43,7 @@ let mockRecipes: [Recipe] = [
         name: "Barbecue Chicken Jollof Rice",
         durationCooking: 60,
         evaluate: 4.5,
-        country: "Nigeria",
+        country: "Greece",
         circleThumbnail: "jollof_circle",
         squareThumbnail: "jollof_square",
         createdAt: Date()
@@ -63,7 +63,7 @@ let mockRecipes: [Recipe] = [
         name: "Steak with tomato sauce and bulgur rice",
         durationCooking: 35,
         evaluate: 5,
-        country: "Turkey",
+        country: "Portugal",
         circleThumbnail: "steak_circle",
         squareThumbnail: "steak_square",
         createdAt: Date()
@@ -83,7 +83,7 @@ let mockRecipes: [Recipe] = [
         name: "Rice Pilaf",
         durationCooking: 30,
         evaluate: 4.0,
-        country: "Central Asia",
+        country: "Middle East",
         circleThumbnail: "ricepilaf_circle",
         squareThumbnail: "ricepilaf_square",
         createdAt: Date()
@@ -93,7 +93,7 @@ let mockRecipes: [Recipe] = [
         name: "Chicken meal with sauce",
         durationCooking: 30,
         evaluate: 4.0,
-        country: "France",
+        country: "Middle East",
         circleThumbnail: "chicken_sauce_circle",
         squareThumbnail: "chicken_sauce_square",
         createdAt: Date()
@@ -103,7 +103,7 @@ let mockRecipes: [Recipe] = [
         name: "Stir-fry chicken with broccoli in sweet and sour sauce and rice",
         durationCooking: 35,
         evaluate: 5,
-        country: "China",
+        country: "Middle East",
         circleThumbnail: "stirfry_circle",
         squareThumbnail: "stirfry_square",
         createdAt: Date()

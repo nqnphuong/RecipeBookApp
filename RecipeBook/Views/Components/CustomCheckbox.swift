@@ -28,7 +28,7 @@ struct CustomCheckbox: View {
                         Image(systemName: "checkmark")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 10, height: 10)
+                            .frame(width: 8, height: 8)
                             .foregroundColor(.white)
                     }
                 }

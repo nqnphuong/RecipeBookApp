@@ -26,7 +26,7 @@ struct SignInScreen: View {
                 SignInButton(action: goToHome).padding(.top, 5)
                 SocialLoginDivider()
                 SocialLoginButtons()
-                SignUpLink()
+                SignUpLink(action: goToSignUp)
             }
             .padding(.top, 57)
         }
@@ -106,7 +106,7 @@ private struct SocialLoginButtons: View {
         HStack(spacing: 25) {
             ForEach(["google", "facebook"], id: \.self) { icon in
                 Button {
-                    // Social login action
+                    //
                 } label: {
                     Image(icon)
                         .resizable()
@@ -124,6 +124,8 @@ private struct SocialLoginButtons: View {
 }
 
 private struct SignUpLink: View {
+    let action : () -> Void
+    
     var body: some View {
         HStack(spacing: 4) {
             Text("Don’t have an account?")
@@ -131,7 +133,7 @@ private struct SignUpLink: View {
                 .textStyle(.smallerRegular)
             
             Button {
-                
+                action()
             } label: {
                 Text("Sign up")
                     .foregroundStyle(.secondary100)
