@@ -11,7 +11,6 @@ struct SignInScreen: View {
     var goToSignUp: () -> Void
     var goToHome: () -> Void
     
-    
     @State private var email = ""
     @State private var password = ""
     @State private var showAlert = false
@@ -24,7 +23,7 @@ struct SignInScreen: View {
             VStack(spacing: 20) {
                 InputSection(email: $email, password: $password)
                 ForgotPasswordText()
-                SignInButton(action: { /* logic */ }).padding(.top, 5)
+                SignInButton(action: goToHome).padding(.top, 5)
                 SocialLoginDivider()
                 SocialLoginButtons()
                 SignUpLink()
@@ -132,7 +131,7 @@ private struct SignUpLink: View {
                 .textStyle(.smallerRegular)
             
             Button {
-                // Navigate to SignUp
+                
             } label: {
                 Text("Sign up")
                     .foregroundStyle(.secondary100)

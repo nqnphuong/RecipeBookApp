@@ -24,16 +24,17 @@ struct HomeScreen: View {
             .padding(.vertical, 10)
             .padding(.leading, 30)
 
-            VStack(alignment: .leading) {
-                RecipesByCountry(recipesData: mockRecipes, paddingEnd: 30)
+            VStack(alignment: .leading, spacing: 5) {
+                VStack(alignment: .leading, spacing: 20) {
+                    RecipesByCountry(recipesData: mockRecipes, paddingEnd: 30)
+                    
+                    Text("New Recipes")
+                        .foregroundColor(.black)
+                        .textStyle(.normalBold)
+                }.padding(.leading, 30)
                 
-                Text("New Recipes")
-                    .foregroundColor(.black)
-                    .textStyle(.normalBold)
-                    .padding(.top, 20)
-                
-            }.padding(.leading, 30)
-            
+                NewRecipes(recipesData: mockRecipes, paddingEnd: 30)
+            }
             Spacer()
         }
         .padding(.top, 20)
