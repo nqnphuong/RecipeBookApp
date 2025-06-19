@@ -11,6 +11,7 @@ struct CustomTabs: View {
     
     var data: [String]
     var isScrollable: Bool
+    var paddingEnd: CGFloat
     @Binding var selectedIndex: Int
     @Namespace private var animationNamespace
     
@@ -54,6 +55,7 @@ struct CustomTabs: View {
                         }
                     )
             }
+            .padding(.trailing, isScrollable && index == data.count - 1 ? paddingEnd : 0)
             .buttonStyle(.plain)
         }
     }
@@ -81,18 +83,21 @@ struct CustomTabsPreview: View {
             CustomTabs(
                 data: ["All", "Indian", "Italian", "Asian", "Chinese"],
                 isScrollable: true,
+                paddingEnd: 30,
                 selectedIndex: $selectedIndex1
             )
             
             CustomTabs(
                 data: ["Ingredient", "Procedure"],
                 isScrollable: false,
+                paddingEnd: 30,
                 selectedIndex: $selectedIndex2
             )
             
             CustomTabs(
                 data: ["Overview", "Steps", "Review"],
                 isScrollable: false,
+                paddingEnd: 30,
                 selectedIndex: $selectedIndex3
             )
         }

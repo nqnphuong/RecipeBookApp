@@ -18,11 +18,22 @@ struct HomeScreen: View {
             CustomTabs(
                 data: ["All", "Indian", "Italian", "Asian", "Chinese"],
                 isScrollable: true,
+                paddingEnd: 30,
                 selectedIndex: $selectedCountry
             )
             .padding(.vertical, 10)
             .padding(.leading, 30)
 
+            VStack(alignment: .leading) {
+                RecipesByCountry(recipesData: mockRecipes, paddingEnd: 30)
+                
+                Text("New Recipes")
+                    .foregroundColor(.black)
+                    .textStyle(.normalBold)
+                    .padding(.top, 20)
+                
+            }.padding(.leading, 30)
+            
             Spacer()
         }
         .padding(.top, 20)

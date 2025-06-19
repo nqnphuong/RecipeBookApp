@@ -80,7 +80,7 @@ struct CustomTabBar: View {
                 }
             }
             .padding(.horizontal, 30)
-
+            
             Button(action: {
                 selectedTab = .newRecipe
             }) {
@@ -91,7 +91,7 @@ struct CustomTabBar: View {
                     .clipShape(Circle())
             }
             .offset(y: -30)
-
+            
         }
     }
     
